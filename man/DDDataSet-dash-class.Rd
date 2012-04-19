@@ -1,0 +1,12 @@
+\name{DDDataSet-class}
+\alias{DDDataSet-class}
+\alias{DDDataSet}
+\title{Dataset class for Direct Dependence Graphs...}
+\description{Dataset class for Direct Dependence Graphs}
+\details{This is the main class to hold data to be used in Direct Dependence Graphs. The data is stored in a \code{data}
+data.frame with the last column named "class". Dataset can be either binary, or continuous. Mixtures of
+binary and continuous variables are currently not supported.}
+\section{Slots}{\describe{\item{\code{name}:}{(\code{\link{character}}) a descriptive name of this dataset used as caption for graphs, etc}\item{\code{data}:}{(\code{\link{data.frame}}) data.frame containing the variables as columns, and the special column "class" as last column}\item{\code{dataType}:}{(\code{\link{character}}) either "binary" or "continuous" are supported, indicated the type of variables present 
+(all need to be either binary or continuous)}}}
+\section{Methods}{\describe{\item{\code{\link[=ciTest,DDDataSet-method]{ciTest}}}{\code{signature(obj = "DDDataSet")}: Do conditional independence test on DDDataSet}\item{\code{\link[=rawData,DDDataSet-method]{rawData}}}{\code{signature(obj = "DDDataSet")}: Return the raw data frame with the variables, and the last column being "class"}\item{\code{\link[=dataType,DDDataSet-method]{dataType}}}{\code{signature(obj = "DDDataSet")}: Return the data type ("binary" or "continuous")}\item{\code{\link[=datasetName,DDDataSet-method]{datasetName}}}{\code{signature(obj = "DDDataSet")}: Dataset name}\item{\code{\link[=names,DDDataSet-method]{names}}}{\code{signature(x = "DDDataSet")}: Names of variables (including "class")}\item{\code{\link[=variableNames,DDDataSet-method]{variableNames}}}{\code{signature(obj = "DDDataSet")}: Names of variables (without "class")}\item{\code{\link[=$,DDDataSet-method]{$}}}{\code{signature(x = "DDDataSet")}: access a specific variable in the dataset by name}\item{\code{\link[=[[,DDDataSet-method]{[[}}}{\code{signature(x = "DDDataSet")}: access a specific variable in the dataset by name}\item{\code{\link[=[,DDDataSet,ANY,ANY-method]{[}}}{\code{signature(x = "DDDataSet", i = "ANY", j = "ANY")}: access a specific variable in the dataset by name}\item{\code{\link[=initialize,DDDataSet-method]{initialize}}}{\code{signature(.Object = "DDDataSet")}: Construct new DDDataSet object}\item{\code{\link[=show,DDDataSet-method]{show}}}{\code{signature(object = "DDDataSet")}: show method for DDDataSet}}}
+

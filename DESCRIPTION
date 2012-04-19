@@ -1,0 +1,29 @@
+Package: ddgraph
+Imports: bnlearn (>= 2.8), infotheo, gtools, pcalg, RColorBrewer,
+        plotrix, MASS
+Maintainer: Robert Stojnic <robert.stojnic@gmail.com>
+License: GPL-3
+Title: Direct and indirect interactions with Graphical Modelling
+LinkingTo: Rcpp
+Type: Package
+LazyLoad: yes
+Author: Robert Stojnic
+Description: Distinguish direct from indirect interactions in gene
+    regulation and infer combinatorial code from highly correlated
+    variables such as transcription factor binding profiles. The
+    package implements the Neigbhourhood Consistent PC algorithm (NCPC)
+    and draws Direct Dependence Graphs to represent dependence
+    structure around a target variable. The package also provides a
+    unified interface to other Graphical Modelling (Bayesian Network)
+    packages for distinguishing direct and indirect interactions.
+Version: 1.0.1
+biocViews: Bioinformatics, GraphsAndNetworks
+Date: 2012-04-10
+Depends: graph, methods, Rcpp
+Suggests: testthat, Rgraphviz, e1071, ROCR, testthat
+Collate: 'AllClassses.R' 'AllGenerics.R' 'calcDependence.R' 'citest.R'
+        'combinations.R' 'dsep.R' 'furlong.R' 'methods-CITestResult.R'
+        'methods-DDDataSet.R' 'methods-DDGraphEdge.R'
+        'methods-DDGraph.R' 'misc.R' 'ncpc.R' 'other-algorithms.R'
+        'plot-colour.R' 'plot.R' 'randomnet.R' 'resampling.R' 'svm.R'
+Packaged: 2012-04-10 15:54:44 UTC; rainman

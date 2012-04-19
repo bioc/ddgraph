@@ -1,0 +1,1416 @@
+setE.pvals
+   tin_2.4    tin_4.6    tin_6.8    bin_6.8   bin_8.10  bin_10.12    twi_2.4    twi_4.6    twi_6.8    bap_6.8   mef2_2.4   mef2_4.6   mef2_6.8 
+0.32689213 0.70111975 0.87227702 0.95488913 0.99454231 0.77690469 0.17299086 0.17652107 0.64649746 0.46286199 0.38321753 0.88678737 0.02910023 
+ mef2_8.10 mef2_10.12 
+0.23902532 0.01437065 
+
+setE.inx
+  mef2_6.8 mef2_10.12 
+        13         15 
+
+setE.names
+[1] "mef2_6.8"   "mef2_10.12"
+
+adjX.p.vals
+           tin_2.4 tin_4.6 tin_6.8 bin_6.8 bin_8.10 bin_10.12 twi_2.4 twi_4.6 twi_6.8 bap_6.8 mef2_2.4 mef2_4.6 mef2_6.8 mef2_8.10 mef2_10.12
+tin_2.4         NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+tin_4.6         NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+tin_6.8         NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+bin_6.8         NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+bin_8.10        NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+bin_10.12       NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+twi_2.4         NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+twi_4.6         NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+twi_6.8         NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+bap_6.8         NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+mef2_2.4        NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+mef2_4.6        NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+mef2_6.8        NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA 0.00266621
+mef2_8.10       NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+mef2_10.12      NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+
+expC.p.vals
+           tin_2.4 tin_4.6 tin_6.8 bin_6.8 bin_8.10 bin_10.12 twi_2.4 twi_4.6 twi_6.8 bap_6.8 mef2_2.4 mef2_4.6 mef2_6.8 mef2_8.10 mef2_10.12
+tin_2.4         NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+tin_4.6         NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+tin_6.8         NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+bin_6.8         NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+bin_8.10        NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+bin_10.12       NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+twi_2.4         NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+twi_4.6         NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+twi_6.8         NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+bap_6.8         NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+mef2_2.4        NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+mef2_4.6        NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+mef2_6.8        NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA 0.02058089
+mef2_8.10       NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+mef2_10.12      NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA       NA        NA         NA
+
+adjX.star.p.vals
+           tin_2.4      tin_4.6      tin_6.8      bin_6.8     bin_8.10    bin_10.12      twi_2.4      twi_4.6      twi_6.8      bap_6.8     mef2_2.4
+tin_2.4         NA 4.722195e-27 4.227150e-09 2.612567e-01 2.448431e-01 2.001871e-01 3.153225e-04 3.506834e-16 2.658714e-06 2.303085e-05 8.435504e-05
+tin_4.6         NA           NA 2.044408e-12 3.282101e-03 7.547704e-01 1.279439e-01 6.577651e-05 4.386055e-19 2.061733e-16 1.162532e-08 1.824998e-08
+tin_6.8         NA           NA           NA 2.944082e-08 4.342138e-02 2.670200e-01 1.389042e-01 4.484253e-06 5.135034e-09 9.232937e-18 4.554100e-07
+bin_6.8         NA           NA           NA           NA 6.039351e-18 9.575743e-13 3.517778e-03 8.746911e-02 9.047723e-02 1.822442e-09 4.663397e-03
+bin_8.10        NA           NA           NA           NA           NA 4.429540e-19 2.859653e-03 8.330041e-02 9.589108e-01 2.996662e-04 9.457275e-01
+bin_10.12       NA           NA           NA           NA           NA           NA 1.643658e-04 3.938552e-02 9.666204e-01 3.335597e-02 6.383669e-01
+twi_2.4         NA           NA           NA           NA           NA           NA           NA 1.590030e-07 3.537683e-02 1.807964e-01 5.063323e-03
+twi_4.6         NA           NA           NA           NA           NA           NA           NA           NA 6.327883e-14 2.686318e-03 7.645539e-05
+twi_6.8         NA           NA           NA           NA           NA           NA           NA           NA           NA 6.306661e-04 3.828676e-05
+bap_6.8         NA           NA           NA           NA           NA           NA           NA           NA           NA           NA 2.014841e-04
+mef2_2.4        NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA
+mef2_4.6        NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA
+mef2_6.8        NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA
+mef2_8.10       NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA
+mef2_10.12      NA           NA           NA           NA           NA           NA           NA           NA           NA           NA           NA
+               mef2_4.6     mef2_6.8    mef2_8.10   mef2_10.12
+tin_2.4    3.767488e-14 1.440172e-04 8.584892e-01 1.142736e-01
+tin_4.6    3.665692e-20 3.349932e-08 4.738625e-01 3.244411e-01
+tin_6.8    1.968487e-10 6.012202e-10 1.498770e-03 1.006390e-01
+bin_6.8    8.746911e-02 2.666210e-03 4.265919e-04 7.105197e-01
+bin_8.10   8.330041e-02 8.416588e-01 4.908148e-02 7.931125e-01
+bin_10.12  9.768376e-02 5.244012e-01 2.609873e-01 4.559082e-01
+twi_2.4    1.126512e-02 5.876865e-01 1.103000e-02 3.517778e-03
+twi_4.6    1.159082e-17 1.017702e-04 8.582385e-01 4.125031e-02
+twi_6.8    7.912210e-15 7.166139e-14 1.334168e-02 7.792865e-01
+bap_6.8    3.124080e-06 3.715317e-07 1.321019e-03 3.834296e-02
+mef2_2.4   1.566639e-07 1.640481e-07 1.699837e-03 6.837270e-04
+mef2_4.6             NA 1.705633e-15 2.657039e-05 1.713117e-01
+mef2_6.8             NA           NA 2.155532e-11 2.666210e-03
+mef2_8.10            NA           NA           NA 7.633493e-16
+mef2_10.12           NA           NA           NA           NA
+
+adjX.star.cond.p.vals
+           tin_2.4 tin_4.6 tin_6.8 bin_6.8 bin_8.10 bin_10.12 twi_2.4 twi_4.6 twi_6.8 bap_6.8 mef2_2.4 mef2_4.6  mef2_6.8 mef2_8.10 mef2_10.12
+tin_2.4         NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA 0.3583034        NA  0.6561670
+tin_4.6         NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA 0.7818623        NA  0.3383855
+tin_6.8         NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA 0.6362981        NA  0.7739167
+bin_6.8         NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA 0.7269142        NA  0.8674188
+bin_8.10        NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA 0.8105814        NA  0.6147521
+bin_10.12       NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA 0.7923253        NA  0.8416658
+twi_2.4         NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA 0.3441302        NA  0.5207835
+twi_4.6         NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA 0.3785078        NA  0.2108270
+twi_6.8         NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA 0.5561629        NA  0.5301771
+bap_6.8         NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA 0.8129733        NA  0.7486783
+mef2_2.4        NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA 0.1848694        NA  0.7737744
+mef2_4.6        NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA 0.3578394        NA  0.9298548
+mef2_6.8        NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA        NA        NA  0.1785510
+mef2_8.10       NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA 0.8217889        NA  0.6061545
+mef2_10.12      NA      NA      NA      NA       NA        NA      NA      NA      NA      NA       NA       NA 0.1089762        NA         NA
+
+adjX.inx
+[[1]]
+NULL
+
+[[2]]
+NULL
+
+[[3]]
+NULL
+
+[[4]]
+NULL
+
+[[5]]
+NULL
+
+[[6]]
+NULL
+
+[[7]]
+NULL
+
+[[8]]
+NULL
+
+[[9]]
+NULL
+
+[[10]]
+NULL
+
+[[11]]
+NULL
+
+[[12]]
+NULL
+
+[[13]]
+NULL
+
+[[14]]
+NULL
+
+[[15]]
+NULL
+
+
+condX.inx
+[[1]]
+NULL
+
+[[2]]
+NULL
+
+[[3]]
+NULL
+
+[[4]]
+NULL
+
+[[5]]
+NULL
+
+[[6]]
+NULL
+
+[[7]]
+NULL
+
+[[8]]
+NULL
+
+[[9]]
+NULL
+
+[[10]]
+NULL
+
+[[11]]
+NULL
+
+[[12]]
+NULL
+
+[[13]]
+NULL
+
+[[14]]
+NULL
+
+[[15]]
+NULL
+
+
+setE.cond
+named integer(0)
+
+onlySetE.cond
+integer(0)
+
+cond.ciTests
+[[1]]
+[[1]][[1]]
+NULL
+
+[[1]][[2]]
+NULL
+
+[[1]][[3]]
+NULL
+
+[[1]][[4]]
+NULL
+
+[[1]][[5]]
+NULL
+
+[[1]][[6]]
+NULL
+
+[[1]][[7]]
+NULL
+
+[[1]][[8]]
+NULL
+
+[[1]][[9]]
+NULL
+
+[[1]][[10]]
+NULL
+
+[[1]][[11]]
+NULL
+
+[[1]][[12]]
+NULL
+
+[[1]][[13]]
+Conditional independence test results using x2 
+  tin_2.4[1] vs class[16], cond=mef2_6.8[13], reliable=TRUE, p.value=0.3583034
+
+[[1]][[14]]
+NULL
+
+[[1]][[15]]
+Conditional independence test results using x2 
+  tin_2.4[1] vs class[16], cond=mef2_10.12[15], reliable=TRUE, p.value=0.656167
+
+
+[[2]]
+[[2]][[1]]
+NULL
+
+[[2]][[2]]
+NULL
+
+[[2]][[3]]
+NULL
+
+[[2]][[4]]
+NULL
+
+[[2]][[5]]
+NULL
+
+[[2]][[6]]
+NULL
+
+[[2]][[7]]
+NULL
+
+[[2]][[8]]
+NULL
+
+[[2]][[9]]
+NULL
+
+[[2]][[10]]
+NULL
+
+[[2]][[11]]
+NULL
+
+[[2]][[12]]
+NULL
+
+[[2]][[13]]
+Conditional independence test results using x2 
+  tin_4.6[2] vs class[16], cond=mef2_6.8[13], reliable=TRUE, p.value=0.7818623
+
+[[2]][[14]]
+NULL
+
+[[2]][[15]]
+Conditional independence test results using x2 
+  tin_4.6[2] vs class[16], cond=mef2_10.12[15], reliable=TRUE, p.value=0.3383855
+
+
+[[3]]
+[[3]][[1]]
+NULL
+
+[[3]][[2]]
+NULL
+
+[[3]][[3]]
+NULL
+
+[[3]][[4]]
+NULL
+
+[[3]][[5]]
+NULL
+
+[[3]][[6]]
+NULL
+
+[[3]][[7]]
+NULL
+
+[[3]][[8]]
+NULL
+
+[[3]][[9]]
+NULL
+
+[[3]][[10]]
+NULL
+
+[[3]][[11]]
+NULL
+
+[[3]][[12]]
+NULL
+
+[[3]][[13]]
+Conditional independence test results using x2 
+  tin_6.8[3] vs class[16], cond=mef2_6.8[13], reliable=TRUE, p.value=0.6362981
+
+[[3]][[14]]
+NULL
+
+[[3]][[15]]
+Conditional independence test results using x2 
+  tin_6.8[3] vs class[16], cond=mef2_10.12[15], reliable=TRUE, p.value=0.7739167
+
+
+[[4]]
+[[4]][[1]]
+NULL
+
+[[4]][[2]]
+NULL
+
+[[4]][[3]]
+NULL
+
+[[4]][[4]]
+NULL
+
+[[4]][[5]]
+NULL
+
+[[4]][[6]]
+NULL
+
+[[4]][[7]]
+NULL
+
+[[4]][[8]]
+NULL
+
+[[4]][[9]]
+NULL
+
+[[4]][[10]]
+NULL
+
+[[4]][[11]]
+NULL
+
+[[4]][[12]]
+NULL
+
+[[4]][[13]]
+Conditional independence test results using x2 
+  bin_6.8[4] vs class[16], cond=mef2_6.8[13], reliable=TRUE, p.value=0.7269142
+
+[[4]][[14]]
+NULL
+
+[[4]][[15]]
+Conditional independence test results using x2 
+  bin_6.8[4] vs class[16], cond=mef2_10.12[15], reliable=TRUE, p.value=0.8674188
+
+
+[[5]]
+[[5]][[1]]
+NULL
+
+[[5]][[2]]
+NULL
+
+[[5]][[3]]
+NULL
+
+[[5]][[4]]
+NULL
+
+[[5]][[5]]
+NULL
+
+[[5]][[6]]
+NULL
+
+[[5]][[7]]
+NULL
+
+[[5]][[8]]
+NULL
+
+[[5]][[9]]
+NULL
+
+[[5]][[10]]
+NULL
+
+[[5]][[11]]
+NULL
+
+[[5]][[12]]
+NULL
+
+[[5]][[13]]
+Conditional independence test results using x2 
+  bin_8.10[5] vs class[16], cond=mef2_6.8[13], reliable=TRUE, p.value=0.8105814
+
+[[5]][[14]]
+NULL
+
+[[5]][[15]]
+Conditional independence test results using x2 
+  bin_8.10[5] vs class[16], cond=mef2_10.12[15], reliable=TRUE, p.value=0.6147521
+
+
+[[6]]
+[[6]][[1]]
+NULL
+
+[[6]][[2]]
+NULL
+
+[[6]][[3]]
+NULL
+
+[[6]][[4]]
+NULL
+
+[[6]][[5]]
+NULL
+
+[[6]][[6]]
+NULL
+
+[[6]][[7]]
+NULL
+
+[[6]][[8]]
+NULL
+
+[[6]][[9]]
+NULL
+
+[[6]][[10]]
+NULL
+
+[[6]][[11]]
+NULL
+
+[[6]][[12]]
+NULL
+
+[[6]][[13]]
+Conditional independence test results using x2 
+  bin_10.12[6] vs class[16], cond=mef2_6.8[13], reliable=TRUE, p.value=0.7923253
+
+[[6]][[14]]
+NULL
+
+[[6]][[15]]
+Conditional independence test results using x2 
+  bin_10.12[6] vs class[16], cond=mef2_10.12[15], reliable=TRUE, p.value=0.8416658
+
+
+[[7]]
+[[7]][[1]]
+NULL
+
+[[7]][[2]]
+NULL
+
+[[7]][[3]]
+NULL
+
+[[7]][[4]]
+NULL
+
+[[7]][[5]]
+NULL
+
+[[7]][[6]]
+NULL
+
+[[7]][[7]]
+NULL
+
+[[7]][[8]]
+NULL
+
+[[7]][[9]]
+NULL
+
+[[7]][[10]]
+NULL
+
+[[7]][[11]]
+NULL
+
+[[7]][[12]]
+NULL
+
+[[7]][[13]]
+Conditional independence test results using x2 
+  twi_2.4[7] vs class[16], cond=mef2_6.8[13], reliable=TRUE, p.value=0.3441302
+
+[[7]][[14]]
+NULL
+
+[[7]][[15]]
+Conditional independence test results using x2 
+  twi_2.4[7] vs class[16], cond=mef2_10.12[15], reliable=TRUE, p.value=0.5207835
+
+
+[[8]]
+[[8]][[1]]
+NULL
+
+[[8]][[2]]
+NULL
+
+[[8]][[3]]
+NULL
+
+[[8]][[4]]
+NULL
+
+[[8]][[5]]
+NULL
+
+[[8]][[6]]
+NULL
+
+[[8]][[7]]
+NULL
+
+[[8]][[8]]
+NULL
+
+[[8]][[9]]
+NULL
+
+[[8]][[10]]
+NULL
+
+[[8]][[11]]
+NULL
+
+[[8]][[12]]
+NULL
+
+[[8]][[13]]
+Conditional independence test results using x2 
+  twi_4.6[8] vs class[16], cond=mef2_6.8[13], reliable=TRUE, p.value=0.3785078
+
+[[8]][[14]]
+NULL
+
+[[8]][[15]]
+Conditional independence test results using x2 
+  twi_4.6[8] vs class[16], cond=mef2_10.12[15], reliable=TRUE, p.value=0.210827
+
+
+[[9]]
+[[9]][[1]]
+NULL
+
+[[9]][[2]]
+NULL
+
+[[9]][[3]]
+NULL
+
+[[9]][[4]]
+NULL
+
+[[9]][[5]]
+NULL
+
+[[9]][[6]]
+NULL
+
+[[9]][[7]]
+NULL
+
+[[9]][[8]]
+NULL
+
+[[9]][[9]]
+NULL
+
+[[9]][[10]]
+NULL
+
+[[9]][[11]]
+NULL
+
+[[9]][[12]]
+NULL
+
+[[9]][[13]]
+Conditional independence test results using x2 
+  twi_6.8[9] vs class[16], cond=mef2_6.8[13], reliable=TRUE, p.value=0.5561629
+
+[[9]][[14]]
+NULL
+
+[[9]][[15]]
+Conditional independence test results using x2 
+  twi_6.8[9] vs class[16], cond=mef2_10.12[15], reliable=TRUE, p.value=0.5301771
+
+
+[[10]]
+[[10]][[1]]
+NULL
+
+[[10]][[2]]
+NULL
+
+[[10]][[3]]
+NULL
+
+[[10]][[4]]
+NULL
+
+[[10]][[5]]
+NULL
+
+[[10]][[6]]
+NULL
+
+[[10]][[7]]
+NULL
+
+[[10]][[8]]
+NULL
+
+[[10]][[9]]
+NULL
+
+[[10]][[10]]
+NULL
+
+[[10]][[11]]
+NULL
+
+[[10]][[12]]
+NULL
+
+[[10]][[13]]
+Conditional independence test results using x2 
+  bap_6.8[10] vs class[16], cond=mef2_6.8[13], reliable=TRUE, p.value=0.8129733
+
+[[10]][[14]]
+NULL
+
+[[10]][[15]]
+Conditional independence test results using x2 
+  bap_6.8[10] vs class[16], cond=mef2_10.12[15], reliable=TRUE, p.value=0.7486783
+
+
+[[11]]
+[[11]][[1]]
+NULL
+
+[[11]][[2]]
+NULL
+
+[[11]][[3]]
+NULL
+
+[[11]][[4]]
+NULL
+
+[[11]][[5]]
+NULL
+
+[[11]][[6]]
+NULL
+
+[[11]][[7]]
+NULL
+
+[[11]][[8]]
+NULL
+
+[[11]][[9]]
+NULL
+
+[[11]][[10]]
+NULL
+
+[[11]][[11]]
+NULL
+
+[[11]][[12]]
+NULL
+
+[[11]][[13]]
+Conditional independence test results using x2 
+  mef2_2.4[11] vs class[16], cond=mef2_6.8[13], reliable=TRUE, p.value=0.1848694
+
+[[11]][[14]]
+NULL
+
+[[11]][[15]]
+Conditional independence test results using x2 
+  mef2_2.4[11] vs class[16], cond=mef2_10.12[15], reliable=TRUE, p.value=0.7737744
+
+
+[[12]]
+[[12]][[1]]
+NULL
+
+[[12]][[2]]
+NULL
+
+[[12]][[3]]
+NULL
+
+[[12]][[4]]
+NULL
+
+[[12]][[5]]
+NULL
+
+[[12]][[6]]
+NULL
+
+[[12]][[7]]
+NULL
+
+[[12]][[8]]
+NULL
+
+[[12]][[9]]
+NULL
+
+[[12]][[10]]
+NULL
+
+[[12]][[11]]
+NULL
+
+[[12]][[12]]
+NULL
+
+[[12]][[13]]
+Conditional independence test results using x2 
+  mef2_4.6[12] vs class[16], cond=mef2_6.8[13], reliable=TRUE, p.value=0.3578394
+
+[[12]][[14]]
+NULL
+
+[[12]][[15]]
+Conditional independence test results using x2 
+  mef2_4.6[12] vs class[16], cond=mef2_10.12[15], reliable=TRUE, p.value=0.9298548
+
+
+[[13]]
+[[13]][[1]]
+NULL
+
+[[13]][[2]]
+NULL
+
+[[13]][[3]]
+NULL
+
+[[13]][[4]]
+NULL
+
+[[13]][[5]]
+NULL
+
+[[13]][[6]]
+NULL
+
+[[13]][[7]]
+NULL
+
+[[13]][[8]]
+NULL
+
+[[13]][[9]]
+NULL
+
+[[13]][[10]]
+NULL
+
+[[13]][[11]]
+NULL
+
+[[13]][[12]]
+NULL
+
+[[13]][[13]]
+NULL
+
+[[13]][[14]]
+NULL
+
+[[13]][[15]]
+Conditional independence test results using x2 
+  mef2_6.8[13] vs class[16], cond=mef2_10.12[15], reliable=TRUE, p.value=0.178551
+
+
+[[14]]
+[[14]][[1]]
+NULL
+
+[[14]][[2]]
+NULL
+
+[[14]][[3]]
+NULL
+
+[[14]][[4]]
+NULL
+
+[[14]][[5]]
+NULL
+
+[[14]][[6]]
+NULL
+
+[[14]][[7]]
+NULL
+
+[[14]][[8]]
+NULL
+
+[[14]][[9]]
+NULL
+
+[[14]][[10]]
+NULL
+
+[[14]][[11]]
+NULL
+
+[[14]][[12]]
+NULL
+
+[[14]][[13]]
+Conditional independence test results using x2 
+  mef2_8.10[14] vs class[16], cond=mef2_6.8[13], reliable=TRUE, p.value=0.8217889
+
+[[14]][[14]]
+NULL
+
+[[14]][[15]]
+Conditional independence test results using x2 
+  mef2_8.10[14] vs class[16], cond=mef2_10.12[15], reliable=TRUE, p.value=0.6061545
+
+
+[[15]]
+[[15]][[1]]
+NULL
+
+[[15]][[2]]
+NULL
+
+[[15]][[3]]
+NULL
+
+[[15]][[4]]
+NULL
+
+[[15]][[5]]
+NULL
+
+[[15]][[6]]
+NULL
+
+[[15]][[7]]
+NULL
+
+[[15]][[8]]
+NULL
+
+[[15]][[9]]
+NULL
+
+[[15]][[10]]
+NULL
+
+[[15]][[11]]
+NULL
+
+[[15]][[12]]
+NULL
+
+[[15]][[13]]
+Conditional independence test results using x2 
+  mef2_10.12[15] vs class[16], cond=mef2_6.8[13], reliable=TRUE, p.value=0.1089762
+
+[[15]][[14]]
+NULL
+
+[[15]][[15]]
+NULL
+
+
+
+Conditioning on sets of 1 variable(s) from mef2_6.8, mef2_10.12 
+
+adjC at n = 1 
+[[1]]
+Conditional independence test results using x2 
+  mef2_6.8[13] vs class[16], cond=[], reliable=TRUE, p.value=0.02910023
+
+[[2]]
+Conditional independence test results using x2 
+  mef2_10.12[15] vs class[16], cond=[], reliable=TRUE, p.value=0.01437065
+
+
+ciTests.adjC at n = 1 
+$`mef2_6.8 vs class | `
+$`mef2_6.8 vs class | `[[1]]
+Conditional independence test results using x2 
+  mef2_6.8[13] vs class[16], cond=[], reliable=TRUE, p.value=0.02910023
+
+$`mef2_6.8 vs class | `[[2]]
+Conditional independence test results using x2 
+  mef2_6.8[13] vs class[16], cond=mef2_10.12[15], reliable=TRUE, p.value=0.178551
+
+
+$`mef2_10.12 vs class | `
+$`mef2_10.12 vs class | `[[1]]
+Conditional independence test results using x2 
+  mef2_10.12[15] vs class[16], cond=[], reliable=TRUE, p.value=0.01437065
+
+$`mef2_10.12 vs class | `[[2]]
+Conditional independence test results using x2 
+  mef2_10.12[15] vs class[16], cond=mef2_6.8[13], reliable=TRUE, p.value=0.1089762
+
+
+
+adjC.pvals at n = 1 
+  mef2_6.8 vs class |  mef2_10.12 vs class |  
+             0.1785510              0.1089762 
+
+adjC.pvals.inx at n = 1 
+  mef2_6.8 vs class |  mef2_10.12 vs class |  
+                     2                      2 
+
+adjC.pvals (adjusted) at n = 1 
+  mef2_6.8 vs class |  mef2_10.12 vs class |  
+             0.1785510              0.1089762 
+
+adjC.delete
+  mef2_6.8 vs class |  mef2_10.12 vs class |  
+                     1                      2 
+
+delete.inx
+[1] 13 15
+
+to.delete
+[1] TRUE TRUE
+
+jointTests
+[[1]]
+[[1]][[1]]
+Conditional independence test results using x2 
+  mef2_10.12[15] vs class[16], cond=mef2_6.8[13], reliable=TRUE, p.value=0.1089762
+
+[[1]][[2]]
+Conditional independence test results using x2 
+  mef2_6.8[13] vs class[16], cond=mef2_10.12[15], reliable=TRUE, p.value=0.178551
+
+
+
+ciTests.adjC.removed
+$`mef2_6.8 vs class | `
+$`mef2_6.8 vs class | `[[1]]
+Conditional independence test results using x2 
+  mef2_6.8[13] vs class[16], cond=[], reliable=TRUE, p.value=0.02910023
+
+$`mef2_6.8 vs class | `[[2]]
+Conditional independence test results using x2 
+  mef2_6.8[13] vs class[16], cond=mef2_10.12[15], reliable=TRUE, p.value=0.178551
+
+
+$`mef2_10.12 vs class | `
+$`mef2_10.12 vs class | `[[1]]
+Conditional independence test results using x2 
+  mef2_10.12[15] vs class[16], cond=[], reliable=TRUE, p.value=0.01437065
+
+$`mef2_10.12 vs class | `[[2]]
+Conditional independence test results using x2 
+  mef2_10.12[15] vs class[16], cond=mef2_6.8[13], reliable=TRUE, p.value=0.1089762
+
+
+
+Variables left after iteration 1 :  
+
+adjC
+list()
+======================================
+
+ciTests
+
+[[1]]
+[[1]][[1]]
+Conditional independence test results using x2 
+  tin_2.4[1] vs class[16], cond=[], reliable=TRUE, p.value=0.3268921
+
+
+[[2]]
+[[2]][[1]]
+Conditional independence test results using x2 
+  tin_4.6[2] vs class[16], cond=[], reliable=TRUE, p.value=0.7011198
+
+
+[[3]]
+[[3]][[1]]
+Conditional independence test results using x2 
+  tin_6.8[3] vs class[16], cond=[], reliable=TRUE, p.value=0.872277
+
+
+[[4]]
+[[4]][[1]]
+Conditional independence test results using x2 
+  bin_6.8[4] vs class[16], cond=[], reliable=TRUE, p.value=0.9548891
+
+
+[[5]]
+[[5]][[1]]
+Conditional independence test results using x2 
+  bin_8.10[5] vs class[16], cond=[], reliable=TRUE, p.value=0.9945423
+
+
+[[6]]
+[[6]][[1]]
+Conditional independence test results using x2 
+  bin_10.12[6] vs class[16], cond=[], reliable=TRUE, p.value=0.7769047
+
+
+[[7]]
+[[7]][[1]]
+Conditional independence test results using x2 
+  twi_2.4[7] vs class[16], cond=[], reliable=TRUE, p.value=0.1729909
+
+
+[[8]]
+[[8]][[1]]
+Conditional independence test results using x2 
+  twi_4.6[8] vs class[16], cond=[], reliable=TRUE, p.value=0.1765211
+
+
+[[9]]
+[[9]][[1]]
+Conditional independence test results using x2 
+  twi_6.8[9] vs class[16], cond=[], reliable=TRUE, p.value=0.6464975
+
+
+[[10]]
+[[10]][[1]]
+Conditional independence test results using x2 
+  bap_6.8[10] vs class[16], cond=[], reliable=TRUE, p.value=0.462862
+
+
+[[11]]
+[[11]][[1]]
+Conditional independence test results using x2 
+  mef2_2.4[11] vs class[16], cond=[], reliable=TRUE, p.value=0.3832175
+
+
+[[12]]
+[[12]][[1]]
+Conditional independence test results using x2 
+  mef2_4.6[12] vs class[16], cond=[], reliable=TRUE, p.value=0.8867874
+
+
+[[13]]
+[[13]][[1]]
+Conditional independence test results using x2 
+  mef2_6.8[13] vs class[16], cond=[], reliable=TRUE, p.value=0.02910023
+
+[[13]][[2]]
+Conditional independence test results using x2 
+  mef2_6.8[13] vs class[16], cond=mef2_10.12[15], reliable=TRUE, p.value=0.178551
+
+
+[[14]]
+[[14]][[1]]
+Conditional independence test results using x2 
+  mef2_8.10[14] vs class[16], cond=[], reliable=TRUE, p.value=0.2390253
+
+
+[[15]]
+[[15]][[1]]
+Conditional independence test results using x2 
+  mef2_10.12[15] vs class[16], cond=[], reliable=TRUE, p.value=0.01437065
+
+[[15]][[2]]
+Conditional independence test results using x2 
+  mef2_10.12[15] vs class[16], cond=mef2_6.8[13], reliable=TRUE, p.value=0.1089762
+
+
+
+adjC.uncond
+
+NULL
+
+adjC.filtered
+
+list()
+
+adjC.before.filtering
+
+list()
+
+jointTests.before.filtering
+[[1]]
+[[1]][[1]]
+Conditional independence test results using x2 
+  mef2_10.12[15] vs class[16], cond=mef2_6.8[13], reliable=TRUE, p.value=0.1089762
+
+[[1]][[2]]
+Conditional independence test results using x2 
+  mef2_6.8[13] vs class[16], cond=mef2_10.12[15], reliable=TRUE, p.value=0.178551
+
+
+
+jointTests
+
+[[1]]
+[[1]][[1]]
+Conditional independence test results using x2 
+  mef2_10.12[15] vs class[16], cond=mef2_6.8[13], reliable=TRUE, p.value=0.1089762
+
+[[1]][[2]]
+Conditional independence test results using x2 
+  mef2_6.8[13] vs class[16], cond=mef2_10.12[15], reliable=TRUE, p.value=0.178551
+
+
+
+adjC
+list()
+
+removed.ids
+[1] "mef2_6.8 vs class | "   "mef2_10.12 vs class | "
+
+direct.nodes
+NULL
+
+indirect.nodes
+NULL
+
+joint.nodes
+[[1]]
+Conditional independence test results using x2 
+  mef2_6.8[13] vs class[16], cond=[], reliable=TRUE, p.value=0.02910023
+
+[[2]]
+Conditional independence test results using x2 
+  mef2_10.12[15] vs class[16], cond=[], reliable=TRUE, p.value=0.01437065
+
+
+conditional.nodes
+NULL
+
+direct.inx
+NULL
+
+indirect.inx
+NULL
+
+joint.inx
+  mef2_6.8 mef2_10.12 
+        13         15 
+
+conditional.inx
+NULL
+
+Dsep
+$tin_2.4
+NULL
+
+$tin_4.6
+NULL
+
+$tin_6.8
+NULL
+
+$bin_6.8
+NULL
+
+$bin_8.10
+NULL
+
+$bin_10.12
+NULL
+
+$twi_2.4
+NULL
+
+$twi_4.6
+NULL
+
+$twi_6.8
+NULL
+
+$bap_6.8
+NULL
+
+$mef2_2.4
+NULL
+
+$mef2_4.6
+NULL
+
+$mef2_6.8
+Conditional independence test results using x2 
+  mef2_6.8[13] vs class[16], cond=mef2_10.12[15], reliable=TRUE, p.value=0.178551
+
+$mef2_8.10
+NULL
+
+$mef2_10.12
+Conditional independence test results using x2 
+  mef2_10.12[15] vs class[16], cond=mef2_6.8[13], reliable=TRUE, p.value=0.1089762
+
+
+all.joint.ids
+[1] "mef2_10.12 vs class | mef2_6.8" "mef2_6.8 vs class | mef2_10.12"
+
+edges
+[[1]]
+EDGE mef2_10.12[15] <-> mef2_6.8[13] based on 2 test(s)
+
+
+stats
+$setE.pvals
+   tin_2.4    tin_4.6    tin_6.8    bin_6.8   bin_8.10  bin_10.12    twi_2.4    twi_4.6    twi_6.8    bap_6.8   mef2_2.4   mef2_4.6   mef2_6.8 
+0.32689213 0.70111975 0.87227702 0.95488913 0.99454231 0.77690469 0.17299086 0.17652107 0.64649746 0.46286199 0.38321753 0.88678737 0.02910023 
+ mef2_8.10 mef2_10.12 
+0.23902532 0.01437065 
+
+$setE.log2FC
+     tin_2.4      tin_4.6      tin_6.8      bin_6.8     bin_8.10    bin_10.12      twi_2.4      twi_4.6      twi_6.8      bap_6.8     mef2_2.4 
+        -Inf -0.276197528  0.121561980  0.054447784 -0.009682553 -0.393011193 -0.866942381 -1.115477217 -0.327422851  0.575279947  0.870023213 
+    mef2_4.6     mef2_6.8    mef2_8.10   mef2_10.12 
+-0.086033440  1.035832106  0.785958948  1.478255493 
+
+$setE.selected
+  mef2_6.8 mef2_10.12 
+        13         15 
+
+$ciTests
+$ciTests[[1]]
+$ciTests[[1]][[1]]
+Conditional independence test results using x2 
+  tin_2.4[1] vs class[16], cond=[], reliable=TRUE, p.value=0.3268921
+
+
+$ciTests[[2]]
+$ciTests[[2]][[1]]
+Conditional independence test results using x2 
+  tin_4.6[2] vs class[16], cond=[], reliable=TRUE, p.value=0.7011198
+
+
+$ciTests[[3]]
+$ciTests[[3]][[1]]
+Conditional independence test results using x2 
+  tin_6.8[3] vs class[16], cond=[], reliable=TRUE, p.value=0.872277
+
+
+$ciTests[[4]]
+$ciTests[[4]][[1]]
+Conditional independence test results using x2 
+  bin_6.8[4] vs class[16], cond=[], reliable=TRUE, p.value=0.9548891
+
+
+$ciTests[[5]]
+$ciTests[[5]][[1]]
+Conditional independence test results using x2 
+  bin_8.10[5] vs class[16], cond=[], reliable=TRUE, p.value=0.9945423
+
+
+$ciTests[[6]]
+$ciTests[[6]][[1]]
+Conditional independence test results using x2 
+  bin_10.12[6] vs class[16], cond=[], reliable=TRUE, p.value=0.7769047
+
+
+$ciTests[[7]]
+$ciTests[[7]][[1]]
+Conditional independence test results using x2 
+  twi_2.4[7] vs class[16], cond=[], reliable=TRUE, p.value=0.1729909
+
+
+$ciTests[[8]]
+$ciTests[[8]][[1]]
+Conditional independence test results using x2 
+  twi_4.6[8] vs class[16], cond=[], reliable=TRUE, p.value=0.1765211
+
+
+$ciTests[[9]]
+$ciTests[[9]][[1]]
+Conditional independence test results using x2 
+  twi_6.8[9] vs class[16], cond=[], reliable=TRUE, p.value=0.6464975
+
+
+$ciTests[[10]]
+$ciTests[[10]][[1]]
+Conditional independence test results using x2 
+  bap_6.8[10] vs class[16], cond=[], reliable=TRUE, p.value=0.462862
+
+
+$ciTests[[11]]
+$ciTests[[11]][[1]]
+Conditional independence test results using x2 
+  mef2_2.4[11] vs class[16], cond=[], reliable=TRUE, p.value=0.3832175
+
+
+$ciTests[[12]]
+$ciTests[[12]][[1]]
+Conditional independence test results using x2 
+  mef2_4.6[12] vs class[16], cond=[], reliable=TRUE, p.value=0.8867874
+
+
+$ciTests[[13]]
+$ciTests[[13]][[1]]
+Conditional independence test results using x2 
+  mef2_6.8[13] vs class[16], cond=[], reliable=TRUE, p.value=0.02910023
+
+$ciTests[[13]][[2]]
+Conditional independence test results using x2 
+  mef2_6.8[13] vs class[16], cond=mef2_10.12[15], reliable=TRUE, p.value=0.178551
+
+
+$ciTests[[14]]
+$ciTests[[14]][[1]]
+Conditional independence test results using x2 
+  mef2_8.10[14] vs class[16], cond=[], reliable=TRUE, p.value=0.2390253
+
+
+$ciTests[[15]]
+$ciTests[[15]][[1]]
+Conditional independence test results using x2 
+  mef2_10.12[15] vs class[16], cond=[], reliable=TRUE, p.value=0.01437065
+
+$ciTests[[15]][[2]]
+Conditional independence test results using x2 
+  mef2_10.12[15] vs class[16], cond=mef2_6.8[13], reliable=TRUE, p.value=0.1089762
+
+
+
+$final.calls
+         name          type explained.by explained.pval conditional.type conditional.on conditional.explained conditional.pval marginal.pval
+1     tin_2.4 no dependence                          NA                                                                           0.32689213
+2     tin_4.6 no dependence                          NA                                                                           0.70111975
+3     tin_6.8 no dependence                          NA                                                                           0.87227702
+4     bin_6.8 no dependence                          NA                                                                           0.95488913
+5    bin_8.10 no dependence                          NA                                                                           0.99454231
+6   bin_10.12 no dependence                          NA                                                                           0.77690469
+7     twi_2.4 no dependence                          NA                                                                           0.17299086
+8     twi_4.6 no dependence                          NA                                                                           0.17652107
+9     twi_6.8 no dependence                          NA                                                                           0.64649746
+10    bap_6.8 no dependence                          NA                                                                           0.46286199
+11   mef2_2.4 no dependence                          NA                                                                           0.38321753
+12   mef2_4.6 no dependence                          NA                                                                           0.88678737
+13   mef2_6.8         joint   mef2_10.12      0.1785510                                                                           0.02910023
+14  mef2_8.10 no dependence                          NA                                                                           0.23902532
+15 mef2_10.12         joint     mef2_6.8      0.1089762                                                                           0.01437065
+         log2FC
+1          -Inf
+2  -0.276197528
+3   0.121561980
+4   0.054447784
+5  -0.009682553
+6  -0.393011193
+7  -0.866942381
+8  -1.115477217
+9  -0.327422851
+10  0.575279947
+11  0.870023213
+12 -0.086033440
+13  1.035832106
+14  0.785958948
+15  1.478255493
+

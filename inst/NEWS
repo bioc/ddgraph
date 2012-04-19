@@ -1,0 +1,6 @@
+
+Version 1.0.1:
+	o Add the toyExample dataset and extend the method introduction in vignette
+
+Version 1.0.0:
+	o Initial release of the package

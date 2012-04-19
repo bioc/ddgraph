@@ -1,0 +1,248 @@
+%\VignetteIndexEntry{Overview of the 'ddgraph' package}
+%\VignetteKeywords{Graphical Modelling, Bayesian Networks}
+%\VignettePackage{ddgraph}
+\documentclass{article}
+\usepackage[nogin]{Sweave}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage[authoryear,round]{natbib}
+\usepackage{float}
+
+\SweaveOpts{echo=T,eval=T,cache=F}
+
+\newcommand{\R}{\texttt{R} }
+\newcommand{\Rfun}[1]{{\texttt{#1}}}
+\newcommand{\Robj}[1]{{\texttt{#1}}}
+\newcommand{\Rpackage}[1]{{\textit{#1}}}
+\newcommand{\email}[1]{\href{mailto:#1}{\normalfont\texttt{#1}}}
+%% colors
+\usepackage{color}
+\definecolor{Red}{rgb}{0.7,0,0}
+\definecolor{Blue}{rgb}{0,0,0.8}
+
+\hypersetup{%
+  hyperindex = {true},
+  colorlinks = {true},
+  linktocpage = {true},
+  plainpages = {false},
+  linkcolor = {Blue},
+  citecolor = {Blue},
+  urlcolor = {Blue},
+  pdfstartview = {Fit},
+  pdfpagemode = {UseOutlines},
+  pdfview = {XYZ null null null}
+}
+
+\author{Robert Stojni\'{c}\footnote{
+  e-mail: \email{robert.stojnic@gmail.com},
+  Cambridge Systems Biology Institute,
+  University of Cambridge, UK}
+}
+
+
+\begin{document}
+
+\title{Overview of the \Rpackage{ddgraph} package}
+
+\maketitle
+
+\tableofcontents
+
+\section{Introduction}\label{sec:intro} 
+
+This package implements the Neighbourhood Consistent PC Algorithm (NCPC) and Direct Dependence Graphs (DDGraphs) which show the dependence structure of a single target variable. 
+
+The main goal of the NCPC algorithm is to infer direct from indirect dependencies to a target variable. Direct dependencies make up the causal neighbourhood of the target variable and in context of transcription binding profiles and gene regulation can be interpreted as the combinatorial code. This is achieved by performing conditional independence tests and therefore establishing statistical independence properties. NCPC has been shown to have a larger recall rate in scenarios with highly correlated variables (such as transcription factor binding profiles) which are weakly associated to a sparse target variable. For more details on the NCPC algorithm see \citep{stojnic_2012}. 
+
+These methods are applicable to any data that come in a matrix format (both binary and continuous) as long as there is one biological target variable. The variables could for instance be either thresholded or threshold-free ChIP-chip/seq profiles, TF binding sites predictions, or indeed any set of biological features that are thought to influence (or are influenced by) a biological target variable. 
+
+The package also implements a unified front-end to a number of other methods for inferring causal neighbourhood and Markov Blanket, as provided by packages \Rpackage{bnlearn} and \Rpackage{pcalg}. These methods include: Bayesian Network reconstruction using Hill-Climbing with BIC and BDe scores, IAMB, FastIAMB, InterIAMB, MMPC, MMHC with BIC/BDe scores and PC algorithm. 
+
+The package is using the S4 class systems but with a limited number of generics. Accessors to data stored in S4 objects are implemented in more traditional list-like fashion using the \$ operator (similar to S3 and RefClass objects). 
+
+\section{A toy example of finding the combinatorial code}
+
+In this section we present a motivating example and explain the statistical and computational context for the NCPC algorithm. For more information about how to usage the package in a typical real-world application please skip to Section \ref{sec:case}.
+
+Assume we are interested in finding transcription factors (TFs) that confer tissue-specificity to a set of cis-regulatory modules (CRMs), and we have the following datasets for a set of CRMs:
+
+\begin{itemize}
+\item A - a binary vector representing if transcription factor A binds to a CRM (e.g. obtained by thresholding a ChIP-chip signal)
+\item B - a binary vector representing if transcription factor B binds to a CRM (e.g. obtained by thresholding a ChIP-chip signal)
+\item T - a binary vector representing if a CRM is tissue specific (e.g. from transgenic reporter assays, proximity of tissue-specific genes, etc). 
+\end{itemize}
+
+This fictional dataset can be accessed with \Robj{data(toyExample)}. This is a \Robj{DDDataSet} object containing a data frame where columns are the two TFs and "class" representing the target variable T. See Section \ref{sec:create} on how to create a \Robj{DDDataSet} from a custom matrix. 
+
+<<setup,echo=FALSE>>=
+options(width=70)
+set.seed(20)
+@
+
+<<toydata,echo=TRUE>>=
+library(ddgraph)
+data(toyExample)
+
+toyExample
+head(rawData(toyExample))
+@
+
+We are interested if A and/or B have a different binding pattern in those CRMs that are tissue specific (T=1) and those that are not (T=0). Traditionally, this is done by performing a Fisher's exact test. We would make a contingency table of T vs A, and T vs B and see if there is a statistical dependence between them. This gives us information about T-A and T-A independently of each other. We can do this with function \Rfun{ciTest}:
+
+<<marginal,echo=TRUE>>=
+ciTest(toyExample, "class", "A", test="fisher")
+ciTest(toyExample, "class", "B", test="fisher")
+@
+
+Both A and B show strong marginal dependence with the target variable (T internally represented as "class"), A more than B but both with fairly low P-values. Thus, both A and B are significantly associated with T. Next we might be interested in the combinatorial pattern of these two TFs. For instance, we might want to cluster our data (1 represented as black, and 0 as white):
+
+\setkeys{Gin}{width=0.75\textwidth}
+<<cluster,fig=TRUE,echo=TRUE>>=
+heatmap(as.matrix(rawData(toyExample)), scale="none", col=c("white", "black"))
+@
+
+Visually we can see that there are clusters when A and B are bound where T=1 (top part of the diagram, T is represented with "class"), but we observe similar clusters for T=0 as well. Thus, it is unclear if there is any tissue-specific combinatorial pattern. 
+
+The question if there is a tissue-specific combinatorial pattern can also be framed as: is T still dependent on B in the context of A? And vica versa, is T still dependent on A in the context of B. 
+
+The question framed like this can be answered using a conditional independence test. This test is similar to marginal dependence test (e.g. Fisher's exact test), except that the data is grouped by one or more variables. If we suspect that A is a tissue-specific TF, and B not tissue specific then we would perform the T vs B test on two sub-datasets: one on CRMs where A=1 and one on CRMs where A=0. If the hypothesis is true, splitting the dataset by A should remove any dependence between T and B. 
+
+Indeed, when we split the dataset by A, we find that in the two partitions (A=0 and A=1) there is no significant association between T and N (here represented as a single P-value):
+
+<<cond2,echo=TRUE>>=
+ciTest(toyExample, "class", "B", "A")
+@
+
+Conversely, if we split the dataset by B, we still find significant association between T and A:
+
+<<cond1,echo=TRUE>>=
+ciTest(toyExample, "class", "A", "B")
+@
+
+This suggests that A is directly associated with T ("class"), while B is associated only via its correlation with A. In terms of theory of causation, we say that A constitutes the causal neighbourhood of T.
+
+Biologically this results suggests that A confers tissue-specificity, while B is associated with tissue-specific CRMs (T) via its correlation with A, possibly due to chromatin structure or other reasons independent of T. 
+
+The NCPC algorithm works by running many such tests and contains additional checks for tests consistency which are especially important when the variables (in our case A and B) are highly correlated, which is the case for many TF binding profiles \citep{stojnic_2012}. 
+
+Front-end function \Rfun{calcDependence()} will by default run the NCPC algorithm but can also run a number of other algorithms that infer the causal neighbourhood and the Markov Blanket.
+
+<<toyfinal,echo=TRUE>>=
+res <- calcDependence(toyExample)
+causalNeigh <- res$nbr
+causalNeigh
+@
+%$
+
+The variables A, B and T need not to be binary. For instance, A and B could be raw ChIP-chip/seq signals over the CRMs, while T could be a probability of a CRM being tissue-specific. In that case, partial correlations would be used as a conditional independence test. That is, a linear relationship would be assumed between variables, and conditioning would be performed by building a regression model. 
+
+\section{Case study - mesodermal CRMs in \textit{D. melanogaster}}\label{sec:case}
+
+To demonstrate a typical pipeline we will use the example of mesodermal cis-regulatory modules (CRMs) in \textit{D. melanogaster} \citep{zinzen_combinatorial_2009}. This dataset comprises of genome-wide binding measurements (using ChIP-chip) for 5 transcription factors (TFs) at 1-5 time points. The binding sites were clustered into putative CRMs that were tested in transgenic reporter assays. 
+
+In this section we assume that the user is familiar with the NCPC algorithm and the DDGraph visualisation vocabulary \citep{stojnic_2012}. 
+
+\subsection{Example data}
+
+The dataset is stored in a matrix format where rows are different observations (CRMs), while columns are different variables (TFs at time points). A column of name "class" is a reserved variable name for the target variable for which we are finding the causal neighbourhood and Markov Blanket. 
+
+<<data,echo=FALSE>>=
+options(width=70)
+set.seed(10)
+@
+
+<<data,echo=TRUE>>=
+library(ddgraph)
+data(mesoBin)
+names(mesoBin)
+head(rawData(mesoBin$VM))
+@
+%$
+
+The example dataset \Robj{mesoBin} is a list of \Robj{DDDataSet} objects, each corresponding to a different target CRM class. Each of the \Robj{DDDataSet} objects contains the binarized TF binding profiles. In the example above we show the binding profiles and target variable (CRM class membership) for the Visceral Muscle (VM) class of CRMs.
+
+\subsection{Inferring direct from indirect dependencies}
+
+The front-end function \Rfun{calcDependence()} calls various algorithm to infer the causal neighbourhood and Markov Blanket. 
+
+<<calcDep,echo=TRUE>>=
+data(mesoBin)
+calcDependence(mesoBin$VM, "ncpc", verbose=FALSE)
+calcDependence(mesoBin$VM, "hc-bic")
+@
+
+The result of \Rfun{calcDependence()} is a list of:
+\begin{itemize}
+\item \Robj{obj} - the resulting S3/S4 object depending on the method. This object can be used for plotting and obtain further information about the results.
+\item \Robj{nbr} - the inferred causal neighbourhood of target variable
+\item \Robj{mb} - the inferred Markov Blanket of target variable (if available for the method)
+\item \Robj{labels} - a set of labels for the variables marking their dependence patterns (if available for the method)
+\item \Robj{table} - a tabular representation of the results, sorted by P-value of marginal dependence (if available for the method). The "type" column represents the type of conditional independence pattern found. 
+\end{itemize}
+
+Each of the different algorithm take a number of parameters, e.g. the conditional independence test, P-value threshold, etc. For more information about these parameters consult the help page \Robj{?calcDependence}. 
+
+\subsection{Direct Dependence Graphs}
+
+The result of NCPC and NCPC* algorithm is a Direct Dependence Graph (DDGraph). The properties of this graph can be accessed using the \$ operator.
+
+<<ncpc,echo=TRUE>>=
+data(mesoBin)
+res <- calcDependence(mesoBin$VM, "ncpc", verbose=FALSE)
+names(res)
+dd <- res$obj
+class(dd)
+names(dd)
+dd$params
+dd$joint
+@
+%$
+
+For the VM CRM class we identified two variables: Bin 6-8h and Bin 8-10h as having the joint dependence pattern. To further explore this results we can plot the DDGraph that summarizes the conditional independence tests that lead to this result. P-values of conditional independencies are given on top of each edge. 
+
+The DDGraph can be plotted by calling the \Rfun{plot()} function. The extra \Robj{col=TRUE} specifies to colour-code the node according to marginal enrichment (red) or depletion (blue). For more options see help page for \Robj{?plot}. 
+
+\setkeys{Gin}{width=0.75\textwidth}
+<<ddgraph-plot,echo=TRUE,fig=TRUE>>=
+plot(dd, col=TRUE)
+@
+
+\subsection{Testing combinations of values}
+
+Once we identified Bin 6-8h and Bin 8-10h as candidates for the causal neighbourhood, we can examine which combinations of their values show most pronounced differences between the CRMs in the VM class, and the rest of CRMs. For binary data this can be achieved using the \Rfun{combinationsTest()} function. 
+
+<<ddgraph-plot,echo=TRUE>>=
+combinationsTest(mesoBin$VM, c("Bin 6-8h", "Bin 8-10h"), 
+	p.adjust.method="fdr", verbose=FALSE)
+@
+%$
+
+The output contains P-values adjusted using the Benjamini-Hochberg method for controlling false discovery rate, and is sorted in ascending P-value order. 
+
+\subsection{Creating a new dataset}\label{sec:create}
+
+A dataset can be created from scratch by invoking the function \Rfun{makeDDDataSet()}. The input is a matrix with rows as observations, columns as variables and the corresponding target variable. Only one target variable can be specified. Currently only binary and continuous data types are supported. 
+
+<<data-new,echo=TRUE>>=
+data <- matrix(rbinom(50, 1, 0.5), ncol=5)
+target <- c(0, 0, 0, 0, 0, 1, 1, 1, 1, 1)
+d <- makeDDDataSet(data, name="example data", classLabels=target)
+d
+rawData(d)
+names(d)
+d$V1
+d$class
+@
+
+If the data is already stored in an S4 object, we recommend implementing the \Rfun{toDDDataSet()} generic to provide a unified mechanism for obtaining \Robj{DDDataSet} instances.  
+
+\section{Session info}
+
+<<sessionInfo,echo=FALSE,results=tex>>=
+toLatex(sessionInfo())
+@
+
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\end{document}ll
