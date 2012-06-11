@@ -41,7 +41,7 @@
 #' }
 setMethod("plot", signature=signature(x="DDGraph", y="missing"), function(x, y, ..., col=NULL, 
           legend=FALSE, only.legend=FALSE, plot.class=TRUE, class.label=datasetName(x@dataset), 
-          ci.symbol = "open", plot.pvals=TRUE, pvals.format=function(x) sprintf("%.2f", x), 
+          ci.symbol = "dot", plot.pvals=TRUE, pvals.format=function(x) sprintf("%.2f", x), 
           pvals.fontsize=12, main=NULL){
 
 	# make sure we have Rgraphviz          

@@ -1,4 +1,7 @@
 
+Version 1.0.2:
+	o Change default representation of conditional independence in DDGraphs from arrows to dots
+
 Version 1.0.1:
 	o Add the toyExample dataset and extend the method introduction in vignette
 

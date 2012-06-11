@@ -2,10 +2,10 @@
 \alias{plot,DDGraph,missing-method}
 \alias{plot}
 \title{Plot DDGraphs using RGraphviz...}
-\usage{\S4method{plot}{DDGraph,missing}(x, y, ..., col, legend=FALSE, only.legend=FALSE, plot.class=TRUE,
-    class.label=datasetName(x@dataset), ci.symbol="open",
+\usage{\S4method{plot}{DDGraph,missing}(x, y, ..., col=NULL, legend=FALSE, only.legend=FALSE, plot.class=TRUE,
+    class.label=datasetName(x@dataset), ci.symbol="dot",
     plot.pvals=TRUE, pvals.format=function(x) sprintf("\%.2f", x),
-    pvals.fontsize=12, main)
+    pvals.fontsize=12, main=NULL)
 }
 \description{Plot DDGraphs using RGraphviz}
 \arguments{\item{x}{DDGraph object}
