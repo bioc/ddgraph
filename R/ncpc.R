@@ -539,7 +539,35 @@ ncpc = function(obj, alpha=0.05, p.value.adjust.method="none", test.type=c("mc-x
 			delete.citests.all = list()
 			for(i in adjC.delete){
 				delete.citests[[ length(delete.citests)+1 ]] = ciTests.adjC[[i]][[ adjC.pvals.inx[i] ]]
-				above.alpha = sapply(ciTests.adjC[[i]], function(xx) xx@pValue > alpha)
+				
+				# find those tests that when substituted have P-value larger than threshold				
+				above.alpha = sapply(ciTests.adjC[[i]], function(indtest){ 
+					## see if it would be deleted if substituted 
+					adjC.pvals.del = adjC.pvals
+				    adjC.pvals.del[i] = indtest@pValue
+				    
+					adjC.pvals.del = p.adjust(adjC.pvals.del, method=p.value.adjust.method)
+
+					#indtest@pValue > alpha 
+					adjC.pvals.del[i] > alpha
+					}
+				)
+				
+				# change the P-value to the last corrected P-value
+				for(aa in which(above.alpha)){
+					indtest = ciTests.adjC[[i]][[aa]]
+					
+					# corrected P-value
+					adjC.pvals.del = adjC.pvals
+				    adjC.pvals.del[i] = indtest@pValue				    
+					adjC.pvals.del = p.adjust(adjC.pvals.del, method=p.value.adjust.method)
+					
+					
+					indtest@pValue = adjC.pvals.del[i]
+					ciTests.adjC[[i]][[aa]] = indtest
+					
+				}
+				
 				delete.citests.all = c(delete.citests.all, ciTests.adjC[[i]][ above.alpha ])
 			}
 			
@@ -552,7 +580,7 @@ ncpc = function(obj, alpha=0.05, p.value.adjust.method="none", test.type=c("mc-x
 						set1 = c(delete.citests.all[[i]]@targetInx, delete.citests.all[[i]]@condSetInx)
 						set2 = c(delete.citests.all[[j]]@targetInx, delete.citests.all[[j]]@condSetInx)
 					
-						stopifnot(length(delete.citests.all[[i]]@condSetInx) == length(delete.citests.all[[j]]@condSetInx))
+						#stopifnot(length(delete.citests.all[[i]]@condSetInx) == length(delete.citests.all[[j]]@condSetInx))
 					
 						if(setequal(set1, set2)){
 							jointTests[[length(jointTests)+1]] = list(delete.citests.all[[i]], delete.citests.all[[j]])

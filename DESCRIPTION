@@ -16,9 +16,9 @@ Description: Distinguish direct from indirect interactions in gene
     structure around a target variable. The package also provides a
     unified interface to other Graphical Modelling (Bayesian Network)
     packages for distinguishing direct and indirect interactions.
-Version: 1.0.2
+Version: 1.0.3
 biocViews: Bioinformatics, GraphsAndNetworks
-Date: 2012-06-10
+Date: 2012-06-18
 Depends: graph, methods, Rcpp
 Suggests: testthat, Rgraphviz, e1071, ROCR, testthat
 Collate: 'AllClassses.R' 'AllGenerics.R' 'calcDependence.R' 'citest.R'

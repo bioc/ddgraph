@@ -1,4 +1,7 @@
 
+Version 1.0.3:
+    o Fixed bugs with multiple testing correction. Show actual multiple-corrected P-values on edges. 
+
 Version 1.0.2:
 	o Change default representation of conditional independence in DDGraphs from arrows to dots
 
