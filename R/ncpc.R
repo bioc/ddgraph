@@ -553,7 +553,8 @@ ncpc = function(obj, alpha=0.05, p.value.adjust.method="none", test.type=c("mc-x
 					}
 				)
 				
-				# change the P-value to the last corrected P-value
+				# change the P-value to the last corrected P-value if its above alpha
+				# since it is going to be removed
 				for(aa in which(above.alpha)){
 					indtest = ciTests.adjC[[i]][[aa]]
 					
@@ -692,6 +693,42 @@ ncpc = function(obj, alpha=0.05, p.value.adjust.method="none", test.type=c("mc-x
 			direct.nodes = c(direct.nodes, x)
 		} else {
 			conditional.nodes = c(conditional.nodes, x)			
+		}
+	}
+	
+	# multiple testing correction might remove a node at later stage
+	# make sure we catch this and kick out the node
+	to.remove.from.indirect = c()
+	if(p.value.adjust.method != "none" & length(ciTests.adjC.removed)>0){		
+		to.remove.from.adjC.removed = c()
+		for(i in 1:length(ciTests.adjC.removed)){
+			citests = ciTests.adjC.removed[[i]]
+			for(j in 1:length(citests)){
+				if(length(citests[[j]]@condSetInx) == 0 && citests[[j]]@pValue > alpha){
+					to.remove.from.indirect = c(to.remove.from.indirect, citests[[j]]@targetInx)
+					to.remove.from.adjC.removed = c(to.remove.from.adjC.removed, i)
+				}
+			}
+		}	
+		
+		if(length(to.remove.from.adjC.removed)>0){
+			ciTests.adjC.removed = ciTests.adjC.removed[-to.remove.from.adjC.removed]
+			# loop throught joint tests and do the same
+			to.remove.joint.tests = c()
+			for(j in 1:length(jointTests)){
+				if((jointTests[[j]][[1]]@targetInx %in% to.remove.from.indirect) | 
+				   (jointTests[[j]][[2]]@targetInx %in% to.remove.from.indirect)){
+					to.remove.joint.tests = c(to.remove.joint.tests, j)
+				}
+			}
+			if(length(to.remove.joint.tests) > 0)
+				jointTests = jointTests[-to.remove.joint.tests]
+				
+			# also remove all conditioning not to confuse the algorithm later on.. 
+			for(j in 1:length(ciTests.adjC.removed)){
+				to.remove.cond = which(sapply(ciTests.adjC.removed[[j]], function(x) to.remove.from.indirect %in% x@condSetInx))
+				ciTests.adjC.removed[[j]] = ciTests.adjC.removed[[j]][-to.remove.cond]				
+			}
 		}
 	}
 	
@@ -1005,7 +1042,7 @@ ncpc = function(obj, alpha=0.05, p.value.adjust.method="none", test.type=c("mc-x
 	
 	## provide summaries about edges in stats
 	for(i in 1:nrow(final.calls)){
-		if(! (i %in% setE.inx) ){
+		if(! (i %in% setE.inx) | i %in% to.remove.from.indirect){
 			final.calls$type[i] = "no dependence"
 			final.calls$explained.pval[i] = NA
 		} else if(i %in% direct.inx){
