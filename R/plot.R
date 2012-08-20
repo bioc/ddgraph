@@ -10,7 +10,7 @@
 #' @param col specifies the colors to be used to color nodes. Can be any of the following:
 #'        \itemize{
 #'            \item named vector of colors
-#'            \item logical value (TRUE = nodes colored in default 0.1 to 1e-3 range, FALSE = no node coloring)
+#'            \item logical value (TRUE = nodes colored in default 0.1 to 1e-3 range, FALSE = no node coloring) - only available for binary datasets.
 #'            \item list of parameters to pass to mapEnrichmentToColorsDual(), 
 #'                  valid pameters are: "palette.pos", "palette.neg", "class.col", "scale", "max.color.index"
 #'        }
@@ -66,7 +66,7 @@ setMethod("plot", signature=signature(x="DDGraph", y="missing"), function(x, y, 
 	
 	# parse the col parameter
 	if( is.logical(col) ){
-		if(col){
+		if(col && all(!is.na(obj@stats$setE.log2FC))){
 			ret.col = mapEnrichmentToColorsDual(obj)
 			col = ret.col$col
 			col.zlim = ret.col$zlim

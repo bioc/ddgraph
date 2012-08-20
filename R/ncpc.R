@@ -160,7 +160,7 @@ ncpc = function(obj, alpha=0.05, p.value.adjust.method="none", test.type=c("mc-x
 		if( dataType(obj) == "binary" )
 			setE.log2FC[i] = log2( mean(dd[dd$class==1,i]) / mean(dd[dd$class==0,i]) )
 		else
-			setE.log2FC[i] = log2( mean(dd[dd$class>0,i]) / mean(dd[dd$class<=0,i]) )
+			setE.log2FC[i] = NA
 		
 		ciTests[[i]] = append(ciTests[[i]], res) # store the results of the ciTest
 	}
