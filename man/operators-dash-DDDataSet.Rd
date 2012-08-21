@@ -18,6 +18,7 @@
 \alias{[[,DDDataSet-method}
 \alias{[[,DDDataSet-method}
 \alias{[,DDDataSet,ANY,ANY-method}
+\alias{[,DDDataSet,ANY,ANY,ANY-method}
 \alias{[}
 \alias{[,DDDataSet-method}
 
