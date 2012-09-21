@@ -27,7 +27,7 @@
 #'        (makes sense only for discrete data)
 #'
 #' @return DDGraph object	
-#' @references R. Stojnic et al (2012): "A Graphical Modelling Approach to the Dissection of Highly Correlated Transcription Factor Binding Site Profiles", submitted. 
+#' @references R. Stojnic et al (2012): "A Graphical Modelling Approach to the Dissection of Highly Correlated Transcription Factor Binding Site Profiles", in press, PloS Computational Biology.
 #' @export
 #' @examples
 #' 

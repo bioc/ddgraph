@@ -11,7 +11,7 @@ algorithm: NCPC and NCPC*. NCPC finds the causal neighbourhood while the NCPC* i
 
 The full algorithm is given in (Stojnic et al, 2012).}
 \value{DDGraph object}
-\references{R. Stojnic et al (2012): "A Graphical Modelling Approach to the Dissection of Highly Correlated Transcription Factor Binding Site Profiles", submitted.}
+\references{R. Stojnic et al (2012): "A Graphical Modelling Approach to the Dissection of Highly Correlated Transcription Factor Binding Site Profiles", in press, PloS Computational Biology.}
 \arguments{\item{obj}{DDDataSet object}
 \item{alpha}{the alpha (P-value) cutoff for conditional independence tests}
 \item{p.value.adjust.method}{the multiple testing correction adjustment method}

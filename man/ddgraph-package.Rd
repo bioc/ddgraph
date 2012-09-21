@@ -45,7 +45,7 @@
 
 \references{
 	\itemize{
-		\item R. Stojnic et al (2012): "A Graphical Modelling Approach to the Dissection of Highly Correlated Transcription Factor Binding Site Profiles", submitted.
+		\item R. Stojnic et al (2012): "A Graphical Modelling Approach to the Dissection of Highly Correlated Transcription Factor Binding Site Profiles", in press, PloS Computational Biology.
 		\item R. Zinzen et al (2009): "Combinatorial binding predicts spatio-temporal cis-regulatory activity"
 Nature 462, no. 7269: 65-70.
 	}
