@@ -2,7 +2,6 @@ useDynLib(ddgraph)
 importFrom(bnlearn, hc, bn.fit, empty.graph, set.arc, random.graph, graphviz.plot, path, amat, nbr, mb,
 	iamb, fast.iamb, mmpc, mmhc, inter.iamb, ci.test)
 importFrom(gtools, combinations)
-importFrom(infotheo, entropy)
 importFrom(MASS, fitdistr)
 importFrom(methods, setGeneric, setClass, representation, new, as, show, setMethod, signature, setValidity)
 importFrom(pcalg, pc, skeleton, binCItest)

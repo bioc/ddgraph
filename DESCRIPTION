@@ -1,5 +1,5 @@
 Package: ddgraph
-Imports: bnlearn (>= 2.8), infotheo, gtools, pcalg, RColorBrewer,
+Imports: bnlearn (>= 2.8), gtools, pcalg, RColorBrewer,
         plotrix, MASS
 Maintainer: Robert Stojnic <robert.stojnic@gmail.com>
 License: GPL-3
@@ -16,7 +16,7 @@ Description: Distinguish direct from indirect interactions in gene
     structure around a target variable. The package also provides a
     unified interface to other Graphical Modelling (Bayesian Network)
     packages for distinguishing direct and indirect interactions.
-Version: 1.3.0
+Version: 1.3.1
 biocViews: Bioinformatics, GraphsAndNetworks
 Date: 2012-06-18
 Depends: graph, methods, Rcpp

@@ -120,7 +120,7 @@ combinationsTest = function(obj, selected.vars, cutoff=0.05, p.adjust.method="no
 		else
 			var.names.all = names(dd)[selected.vars]
 		
-		cat("\nJoint entropy of ", paste(var.names.all, collapse=", "), ": ", entropy(comb)*log2(exp(1)), " bits\n", sep="")
+		#cat("\nJoint entropy of ", paste(var.names.all, collapse=", "), ": ", entropy(comb)*log2(exp(1)), " bits\n", sep="")
 	}
 	out = data.frame("combination"=all.comb, "p.value"=p.vals, "freq.pos"=all.freq1, "freq.neg"=all.freq0, 
 		"type"=enrich.status, "fold.difference"=enrich.fold, stringsAsFactors=F)
