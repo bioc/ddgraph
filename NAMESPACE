@@ -7,6 +7,7 @@ importFrom(methods, setGeneric, setClass, representation, new, as, show, setMeth
 importFrom(pcalg, pc, skeleton, binCItest)
 importFrom(plotrix, color.legend, gradient.rect)
 importFrom(RColorBrewer, brewer.pal)
+importFrom(Rcpp, evalCpp)
 exportClasses(FurlongDataSet)
 exportClasses(DDDataSet)
 exportClasses(DDGraph)
