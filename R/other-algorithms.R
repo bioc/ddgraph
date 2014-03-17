@@ -154,7 +154,7 @@ plotPCalg = function(d, name=NULL, alpha=0.05, verbose=FALSE, directed=TRUE, mak
 	# calculate the graph 
 	if(directed){
 		# use PC algorithm for directed graphs 
-		fit <- pc(suffStat, indepTest, p, alpha, verbose = verbose)
+		fit <- pc(suffStat, indepTest, p=p, alpha=alpha, verbose = verbose)
 		if( make.plot )
 			customPlotPCAlgo(fit, main = paste("PC:",name), labels=names(dd), colors=colors)
 	} else{

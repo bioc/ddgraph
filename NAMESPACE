@@ -1,9 +1,10 @@
 useDynLib(ddgraph)
+import(methods)
 importFrom(bnlearn, hc, bn.fit, empty.graph, set.arc, random.graph, graphviz.plot, path, amat, nbr, mb,
 	iamb, fast.iamb, mmpc, mmhc, inter.iamb, ci.test)
+import(graph)
 importFrom(gtools, combinations)
 importFrom(MASS, fitdistr)
-importFrom(methods, setGeneric, setClass, representation, new, as, show, setMethod, signature, setValidity)
 importFrom(pcalg, pc, skeleton, binCItest)
 importFrom(plotrix, color.legend, gradient.rect)
 importFrom(RColorBrewer, brewer.pal)

@@ -1,5 +1,5 @@
 Package: ddgraph
-Imports: bnlearn (>= 2.8), gtools, pcalg, RColorBrewer, plotrix, MASS, Rcpp
+Imports: bnlearn (>= 2.8), gtools, pcalg, RColorBrewer, plotrix, MASS
 Maintainer: Robert Stojnic <robert.stojnic@gmail.com>
 License: GPL-3
 Title: Distinguish direct and indirect interactions with Graphical
@@ -17,10 +17,10 @@ Description: Distinguish direct from indirect interactions in gene
         provides a unified interface to other Graphical Modelling
         (Bayesian Network) packages for distinguishing direct and
         indirect interactions.
-Version: 1.7.4
+Version: 1.7.5
 Date: 2012-06-18
 Depends: graph, methods, Rcpp
-Suggests: testthat, Rgraphviz, e1071, ROCR, testthat
+Suggests: Rgraphviz, e1071, ROCR, testthat
 Collate: 'AllClassses.R' 'AllGenerics.R' 'calcDependence.R' 'citest.R'
         'combinations.R' 'dsep.R' 'furlong.R' 'methods-CITestResult.R'
         'methods-DDDataSet.R' 'methods-DDGraphEdge.R'
