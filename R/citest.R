@@ -147,9 +147,17 @@ setMethod("ciTest", signature=signature(obj="DDDataSet"), function(obj, var1, va
 			B = NULL 
 		# assume bnlearn test if other test names
 		if( dataType(obj) == "binary" ){
-			p.val = bnlearn::ci.test(convertToFactor(val.a), convertToFactor(val.b), convertToFactor(val.c), test=test.type, B=B)$p.value
+			if(length(val.c) == 0){
+				p.val = bnlearn::ci.test(convertToFactor(val.a), convertToFactor(val.b), test=test.type, B=B)$p.value
+			} else {
+				p.val = bnlearn::ci.test(convertToFactor(val.a), convertToFactor(val.b), convertToFactor(val.c), test=test.type, B=B)$p.value
+			}
 		} else {
-			p.val = bnlearn::ci.test(val.a, val.b, val.c, test=test.type)$p.value
+			if(length(val.c) == 0){
+				p.val = bnlearn::ci.test(val.a, val.b, test=test.type)$p.value
+			} else {
+				p.val = bnlearn::ci.test(val.a, val.b, val.c, test=test.type)$p.value
+			}
 		}
 			
 	}
@@ -220,7 +228,11 @@ mcMITest = function (x, y, S, suffStat) {
     else
 	    c = convertToFactor(dm[,S])
     
-    pval <- bnlearn::ci.test(a, b, c, test="mc-mi")$p.value
+    if(length(c) == 0){
+    	pval <- bnlearn::ci.test(a, b, test="mc-mi")$p.value
+    } else {
+    	pval <- bnlearn::ci.test(a, b, c, test="mc-mi")$p.value
+    }
     pval
 }
 
