@@ -42,25 +42,25 @@ if(.Platform$OS.type == "unix"){
 
 	# run the inference tool using x2 as distribution so we always get the same results
 
-	ncpc(all.data$Meso, alpha=0.05, test.type="x2", report.file="reports/meso_0.05.txt", verbose=FALSE, min.table.size=NULL)
-	ncpc(all.data$Meso, alpha=0.1, test.type="x2", report.file="reports/meso_0.1.txt", verbose=FALSE, min.table.size=NULL)
-	ncpc(all.data$Meso, alpha=0.2, test.type="x2", report.file="reports/meso_0.2.txt", verbose=FALSE, min.table.size=NULL)
+	ncpc(all.data$Meso, alpha=0.05, test.type="mi-sh", report.file="reports/meso_0.05.txt", verbose=FALSE, min.table.size=NULL)
+	ncpc(all.data$Meso, alpha=0.1, test.type="mi-sh", report.file="reports/meso_0.1.txt", verbose=FALSE, min.table.size=NULL)
+	ncpc(all.data$Meso, alpha=0.2, test.type="mi-sh", report.file="reports/meso_0.2.txt", verbose=FALSE, min.table.size=NULL)
 
-	ncpc(all.data$VM, alpha=0.05, test.type="x2", report.file="reports/vm_0.05.txt", verbose=FALSE, min.table.size=NULL)
-	ncpc(all.data$VM, alpha=0.1, test.type="x2", report.file="reports/vm_0.1.txt", verbose=FALSE, min.table.size=NULL)
-	ncpc(all.data$VM, alpha=0.2, test.type="x2", report.file="reports/vm_0.2.txt", verbose=FALSE, min.table.size=NULL)
+	ncpc(all.data$VM, alpha=0.05, test.type="mi-sh", report.file="reports/vm_0.05.txt", verbose=FALSE, min.table.size=NULL)
+	ncpc(all.data$VM, alpha=0.1, test.type="mi-sh", report.file="reports/vm_0.1.txt", verbose=FALSE, min.table.size=NULL)
+	ncpc(all.data$VM, alpha=0.2, test.type="mi-sh", report.file="reports/vm_0.2.txt", verbose=FALSE, min.table.size=NULL)
 
-	ncpc(all.data$VM_SM, alpha=0.05, test.type="x2", report.file="reports/vm_sm_0.05.txt", verbose=FALSE, min.table.size=NULL)
-	ncpc(all.data$VM_SM, alpha=0.1, test.type="x2", report.file="reports/vm_sm_0.1.txt", verbose=FALSE, min.table.size=NULL)
-	ncpc(all.data$VM_SM, alpha=0.2, test.type="x2", report.file="reports/vm_sm_0.2.txt", verbose=FALSE, min.table.size=NULL)
+	ncpc(all.data$VM_SM, alpha=0.05, test.type="mi-sh", report.file="reports/vm_sm_0.05.txt", verbose=FALSE, min.table.size=NULL)
+	ncpc(all.data$VM_SM, alpha=0.1, test.type="mi-sh", report.file="reports/vm_sm_0.1.txt", verbose=FALSE, min.table.size=NULL)
+	ncpc(all.data$VM_SM, alpha=0.2, test.type="mi-sh", report.file="reports/vm_sm_0.2.txt", verbose=FALSE, min.table.size=NULL)
 
-	ncpc(all.data$Meso_SM, alpha=0.05, test.type="x2", report.file="reports/meso_sm_0.05.txt", verbose=FALSE, min.table.size=NULL)
-	ncpc(all.data$Meso_SM, alpha=0.1, test.type="x2", report.file="reports/meso_sm_0.1.txt", verbose=FALSE, min.table.size=NULL)
-	ncpc(all.data$Meso_SM, alpha=0.2, test.type="x2", report.file="reports/meso_sm_0.2.txt", verbose=FALSE, min.table.size=NULL)
+	ncpc(all.data$Meso_SM, alpha=0.05, test.type="mi-sh", report.file="reports/meso_sm_0.05.txt", verbose=FALSE, min.table.size=NULL)
+	ncpc(all.data$Meso_SM, alpha=0.1, test.type="mi-sh", report.file="reports/meso_sm_0.1.txt", verbose=FALSE, min.table.size=NULL)
+	ncpc(all.data$Meso_SM, alpha=0.2, test.type="mi-sh", report.file="reports/meso_sm_0.2.txt", verbose=FALSE, min.table.size=NULL)
 
-	ncpc(all.data$SM, alpha=0.05, test.type="x2", report.file="reports/sm_0.05.txt", verbose=FALSE, min.table.size=NULL)
-	ncpc(all.data$SM, alpha=0.1, test.type="x2", report.file="reports/sm_0.1.txt", verbose=FALSE, min.table.size=NULL)
-	ncpc(all.data$SM, alpha=0.2, test.type="x2", report.file="reports/sm_0.2.txt", verbose=FALSE, min.table.size=NULL)
+	ncpc(all.data$SM, alpha=0.05, test.type="mi-sh", report.file="reports/sm_0.05.txt", verbose=FALSE, min.table.size=NULL)
+	ncpc(all.data$SM, alpha=0.1, test.type="mi-sh", report.file="reports/sm_0.1.txt", verbose=FALSE, min.table.size=NULL)
+	ncpc(all.data$SM, alpha=0.2, test.type="mi-sh", report.file="reports/sm_0.2.txt", verbose=FALSE, min.table.size=NULL)
 
 	all.names = c("meso_0.05.txt", "meso_0.1.txt", "meso_0.2.txt", "vm_0.05.txt", "vm_0.1.txt", "vm_0.2.txt",
 		"vm_sm_0.05.txt", "vm_sm_0.1.txt", "vm_sm_0.2.txt", "meso_sm_0.05.txt", "meso_sm_0.1.txt", "meso_sm_0.2.txt",
@@ -76,25 +76,25 @@ if(.Platform$OS.type == "unix"){
 
 	# run same with the star algorithm
 
-	ncpc(all.data$Meso, alpha=0.05, test.type="x2", report.file="reports/star-meso_0.05.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
-	ncpc(all.data$Meso, alpha=0.1, test.type="x2", report.file="reports/star-meso_0.1.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
-	ncpc(all.data$Meso, alpha=0.2, test.type="x2", report.file="reports/star-meso_0.2.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
+	ncpc(all.data$Meso, alpha=0.05, test.type="mi-sh", report.file="reports/star-meso_0.05.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
+	ncpc(all.data$Meso, alpha=0.1, test.type="mi-sh", report.file="reports/star-meso_0.1.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
+	ncpc(all.data$Meso, alpha=0.2, test.type="mi-sh", report.file="reports/star-meso_0.2.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
 
-	ncpc(all.data$VM, alpha=0.05, test.type="x2", report.file="reports/star-vm_0.05.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
-	ncpc(all.data$VM, alpha=0.1, test.type="x2", report.file="reports/star-vm_0.1.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
-	ncpc(all.data$VM, alpha=0.2, test.type="x2", report.file="reports/star-vm_0.2.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
+	ncpc(all.data$VM, alpha=0.05, test.type="mi-sh", report.file="reports/star-vm_0.05.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
+	ncpc(all.data$VM, alpha=0.1, test.type="mi-sh", report.file="reports/star-vm_0.1.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
+	ncpc(all.data$VM, alpha=0.2, test.type="mi-sh", report.file="reports/star-vm_0.2.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
 
-	ncpc(all.data$VM_SM, alpha=0.05, test.type="x2", report.file="reports/star-vm_sm_0.05.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
-	ncpc(all.data$VM_SM, alpha=0.1, test.type="x2", report.file="reports/star-vm_sm_0.1.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
-	ncpc(all.data$VM_SM, alpha=0.2, test.type="x2", report.file="reports/star-vm_sm_0.2.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
+	ncpc(all.data$VM_SM, alpha=0.05, test.type="mi-sh", report.file="reports/star-vm_sm_0.05.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
+	ncpc(all.data$VM_SM, alpha=0.1, test.type="mi-sh", report.file="reports/star-vm_sm_0.1.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
+	ncpc(all.data$VM_SM, alpha=0.2, test.type="mi-sh", report.file="reports/star-vm_sm_0.2.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
 
-	ncpc(all.data$Meso_SM, alpha=0.05, test.type="x2", report.file="reports/star-meso_sm_0.05.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
-	ncpc(all.data$Meso_SM, alpha=0.1, test.type="x2", report.file="reports/star-meso_sm_0.1.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
-	ncpc(all.data$Meso_SM, alpha=0.2, test.type="x2", report.file="reports/star-meso_sm_0.2.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
+	ncpc(all.data$Meso_SM, alpha=0.05, test.type="mi-sh", report.file="reports/star-meso_sm_0.05.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
+	ncpc(all.data$Meso_SM, alpha=0.1, test.type="mi-sh", report.file="reports/star-meso_sm_0.1.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
+	ncpc(all.data$Meso_SM, alpha=0.2, test.type="mi-sh", report.file="reports/star-meso_sm_0.2.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
 
-	ncpc(all.data$SM, alpha=0.05, test.type="x2", report.file="reports/star-sm_0.05.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
-	ncpc(all.data$SM, alpha=0.1, test.type="x2", report.file="reports/star-sm_0.1.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
-	ncpc(all.data$SM, alpha=0.2, test.type="x2", report.file="reports/star-sm_0.2.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
+	ncpc(all.data$SM, alpha=0.05, test.type="mi-sh", report.file="reports/star-sm_0.05.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
+	ncpc(all.data$SM, alpha=0.1, test.type="mi-sh", report.file="reports/star-sm_0.1.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
+	ncpc(all.data$SM, alpha=0.2, test.type="mi-sh", report.file="reports/star-sm_0.2.txt", verbose=FALSE, star=TRUE, min.table.size=NULL)
 
 	all.files = paste("reports/", all.names, sep="")
 
@@ -112,35 +112,35 @@ if(.Platform$OS.type == "unix"){
 
 
 	set.seed(100)
-	rob = ncpcResampling(all.data$VM, "jackknife", 310/5, alpha=0.05, test.type="x2", verbose=F)
+	rob = ncpcResampling(all.data$VM, "jackknife", 310/5, alpha=0.05, test.type="mi-sh", verbose=F)
 
 	test_that("Robustness estimates", {
 		expect_equal(rob@raw[[1]]$direct, "bap_6.8")
-		expect_equal(rob@raw[[1]]$joint, character(0))
+		expect_equal(rob@raw[[1]]$joint, "twi_4.6")
 		expect_equal(rob@raw[[1]]$indirect, c("tin_6.8", "bin_6.8", "bin_8.10", "twi_2.4"))
-		expect_equal(rob@raw[[1]]$directAndJoint, "bap_6.8")
+		expect_equal(rob@raw[[1]]$directAndJoint, c("bap_6.8", "twi_4.6"))
 		expect_equal(rob@raw[[1]]$jointIfNotDirect, "bap_6.8")
 	
-		expect_equal(rob@raw[[2]]$direct, "bin_8.10")
-		expect_equal(rob@raw[[2]]$joint, character(0))
-		expect_equal(rob@raw[[2]]$indirect, c("bin_6.8", "bin_10.12"))
-		expect_equal(rob@raw[[2]]$directAndJoint, "bin_8.10")
-		expect_equal(rob@raw[[2]]$jointIfNotDirect, "bin_8.10")
+		expect_equal(rob@raw[[2]]$direct, character(0))
+		expect_equal(rob@raw[[2]]$joint, c("bin_6.8", "bin_8.10"))
+		expect_equal(rob@raw[[2]]$indirect, "bin_10.12")
+		expect_equal(rob@raw[[2]]$directAndJoint, c("bin_6.8", "bin_8.10"))
+		expect_equal(rob@raw[[2]]$jointIfNotDirect, c("bin_6.8", "bin_8.10"))
 	
-		expect_equal(rob@raw[[3]]$direct, c("bin_6.8", "bin_8.10"))
-		expect_equal(rob@raw[[3]]$joint, c("bap_6.8"))
+		expect_equal(rob@raw[[3]]$direct, character(0))
+		expect_equal(rob@raw[[3]]$joint, c("bin_6.8", "bin_8.10", "bap_6.8"))
 		expect_equal(rob@raw[[3]]$indirect, c("tin_6.8", "bin_10.12", "twi_2.4", "twi_4.6"))
 		expect_equal(rob@raw[[3]]$directAndJoint, c("bin_6.8", "bin_8.10", "bap_6.8"))
-		expect_equal(rob@raw[[3]]$jointIfNotDirect, c("bin_6.8", "bin_8.10"))
+		expect_equal(rob@raw[[3]]$jointIfNotDirect, c("bin_6.8", "bin_8.10", "bap_6.8"))
 	
 		expect_equal(rob@raw[[4]]$direct, character(0))
-		expect_equal(rob@raw[[4]]$joint, c("bin_8.10", "bin_10.12"))
-		expect_equal(rob@raw[[4]]$indirect, c("bin_6.8"))
-		expect_equal(rob@raw[[4]]$directAndJoint, c("bin_8.10", "bin_10.12"))
-		expect_equal(rob@raw[[4]]$jointIfNotDirect, c("bin_8.10", "bin_10.12"))
+		expect_equal(rob@raw[[4]]$joint, c("bin_6.8", "bin_8.10", "bin_10.12"))
+		expect_equal(rob@raw[[4]]$indirect,  character(0))
+		expect_equal(rob@raw[[4]]$directAndJoint, c("bin_6.8", "bin_8.10", "bin_10.12"))
+		expect_equal(rob@raw[[4]]$jointIfNotDirect, c("bin_6.8", "bin_8.10", "bin_10.12"))
 	
-		expect_equal(rob@raw[[5]]$direct, c("bin_6.8", "bin_8.10"))
-		expect_equal(rob@raw[[5]]$joint, character(0))
+		expect_equal(rob@raw[[5]]$direct, character(0))
+		expect_equal(rob@raw[[5]]$joint, c("bin_6.8", "bin_8.10"))
 		expect_equal(rob@raw[[5]]$indirect, c("tin_6.8", "bin_10.12", "twi_2.4", "twi_4.6", "bap_6.8"))
 		expect_equal(rob@raw[[5]]$directAndJoint, c("bin_6.8", "bin_8.10"))
 		expect_equal(rob@raw[[5]]$jointIfNotDirect, c("bin_6.8", "bin_8.10"))
