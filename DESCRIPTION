@@ -17,7 +17,7 @@ Description: Distinguish direct from indirect interactions in gene
         provides a unified interface to other Graphical Modelling
         (Bayesian Network) packages for distinguishing direct and
         indirect interactions.
-Version: 1.15.0
+Version: 1.16.0
 Date: 2015-01-27
 Depends: graph, methods, Rcpp
 Suggests: Rgraphviz, e1071, ROCR, testthat
