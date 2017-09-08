@@ -27,3 +27,4 @@ Collate: 'AllClassses.R' 'AllGenerics.R' 'calcDependence.R' 'citest.R'
         'methods-DDGraph.R' 'misc.R' 'ncpc.R' 'other-algorithms.R'
         'plot-colour.R' 'plot.R' 'randomnet.R' 'resampling.R' 'svm.R'
 biocViews: GraphAndNetwork
+PackageStatus: Deprecated
